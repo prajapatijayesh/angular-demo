@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+.mt-05 {
+    margin-top: .5rem;
+}
+
+.badge.badge-success  {
+    padding: .5rem!important;
+}
+.badge.badge-danger {
+    padding: .5rem!important;
+}
+.ble-content > .stack-block-content {
+    width: 100% !important;
+}
+.ble-content > .stack-block-label {
+    padding: 0 !important;
+}

@@ -1,0 +1,20 @@
+<div class="login-wrapper">
+  <form #loginForm="ngForm" class="login" (ngSubmit)="onSubmit()">
+    <div class="login-group">
+      <input class="username" type="text" id="email" placeholder="Email" name="email" #name="ngModel" [(ngModel)]="model.email"
+        required>
+      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        Email is required
+      </div>
+      <input class="password" type="password" id="password" placeholder="Password" name="password" #password="ngModel" [(ngModel)]="model.password"
+        required>
+      <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+        Password is required
+      </div>
+      <div class="error active" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+      <button type="submit" class="btn btn-primary" [clrLoading]="isLoading" [disabled]="!loginForm.form.valid">Login</button>
+    </div>
+  </form>
+</div>
